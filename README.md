@@ -1,6 +1,6 @@
 ## 静态页面页面全站搜索jquery插件
 
- 本插件作为jquery插件，使用XML作为数据原始数据，最初设计于使用github的jekyll作为博客站点，我的博客[](http://www.songyuchao.com)也是使用这个插件
+ 本插件作为jquery插件，使用XML作为数据原始数据，最初设计于使用github的jekyll作为博客站点，我的博客[我是链接](http://www.songyuchao.com)也是使用这个插件
 
 ### 数据源构造
 
