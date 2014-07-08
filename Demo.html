@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      charset="utf-8">
+<head>
+    <title>jekyll静态网页用全站搜索用jquery</title>
+    <script src="lib/jquery-1.11.0.min.js"></script>
+    <script src="lib/jquery.site-search.js"></script>
+</head>
+<body>
+<form  role="search" id="search_form" data-url="http://www.songyuchao.com/search.xml">
+    <div class="form-group">
+        <input type="text"  placeholder="请输入搜索关键字" >
+    </div>
+    <button type="submit"  id="search_submit">搜一下</button>
+</form>
+<script>
+    var Setting = {}
+    Setting.reviewCallback = function(regArray){
+        var html = "<div class='container'><div class='row'><h2>下面是包含关键字的文章</h2>"
+        $.each(regArray,function(){
+            html =  html + '<a href="'+ this.url +'" class="col-md-7">'+'<hr class="featurette-divider"><h3>' + this.title +'</h3><p>'+ this.time +'</p><p>'+ $(this.content).text()  +'</p>'+'<hr class="featurette-divider">'+'</a>' + ""
+
+        })
+        html + "</div></div>"
+        $("body").html(html)
+    }
+    $("#search_form").siteSearch(Setting)
+</script>
+</body>
+</html>
