@@ -53,3 +53,13 @@
     4. obj.time 页面创建时间
 * 如果没有回调程序将返回这个数组
 
+### 增加搜索框
+
+增加的搜索框有且只有一个输入框，并且有提交按钮，如下所示
+
+    <form  role="search" id="search_form" data-url="http://www.songyuchao.com/search.xml">
+        <div class="form-group">
+            <input type="text"  placeholder="请输入搜索关键字" >
+        </div>
+        <button type="submit"  id="search_submit">搜一下</button>
+    </form>
